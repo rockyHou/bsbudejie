@@ -1,0 +1,53 @@
+<!--me.wxml  -->
+<view class="me-container" style="height:{{swiperHeight}}px">
+
+  <!--登录cell  -->
+  <view class="login">
+
+    <view class="login-icon">
+      <image src="../../images/other/default.png"></image>
+      <text>登录/注册</text>
+    </view>
+
+    <view class="login-arrow"> > </view>
+  </view>
+
+  <!--功能按钮  -->
+  <swiper indicator-dots="{{true}}" interval="1000" duration="300" indicator-color="rgba(9, 9, 9, .5)" indicator-active-color="#ff0000">
+    <block wx:for="{{squarelist}}">
+    <swiper-item>
+      <view class="btnView">
+        <!--按钮  -->
+        <view class="btnView-btn" wx:for="{{item}}" wx:for-item="v">
+            <image src="{{v.icon}}"></image>
+            <text>{{v.name}}</text>
+        </view>
+        
+      </view>
+    </swiper-item>
+    </block>
+  </swiper>
+
+  <!--推荐订阅  -->
+  <view class="recommendTag">
+    <view class="recommendTag-header">
+      <text>推荐订阅</text>
+    </view>
+
+    <!--cell  -->
+    <view class="recommendTag-cell" wx:for="{{recommendTag}}">
+      <view class="recommendTag-cell-left">
+        <image src="{{item.image_list}}"></image>
+        <view class="recommendTag-cell-title">
+          <text class="nc">{{item.theme_name}}</text>
+          <text class="tj">{{item.sub_number}}订阅 | 总贴数<text class="tz">{{item.post_num}}</text></text>
+        </view>
+      </view>
+      <view class="recommendTag-cell-right">
+        <button size="mini">+订阅</button>
+      </view>
+    </view>   
+
+  </view>
+
+</view>

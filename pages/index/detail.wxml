@@ -1,0 +1,136 @@
+<!--detail.wxml  -->
+<scroll-view class="scrollView" scroll-y="{{true}}" bindscrolltolower="loadMoreData" bindscrolltoupper="refreshNewData" style="width:{{swiperWidth}}px;height:{{swiperHeight}}px">
+<view class="cell">
+  <!--贴子头部  -->
+        <view class="cell-header">
+          <view class="cell-header-icon">
+            <image src="{{item.profile_image}}"></image>
+          </view>
+          <view class="cell-header-name">
+          <text>{{item.name}}</text>
+          <text class="cell-header-time">{{item.passtime}}</text>
+          </view>
+        </view>
+
+        <!--贴子内容  -->
+        <view class="cell-content">
+          <view class="cell-content-text">
+            <text>{{item.text}}</text>
+          </view>
+
+          <view class="cell-content-image" wx:if="{{item.image1 && item.voiceuri == '' && item.videouri == ''}}" bindtap='clickImage'>
+            <image src="{{item.image1}}" mode="center"></image>
+          </view> 
+
+          <view class="cell-content-voice" wx:if="{{item.image1 && item.voiceuri && item.videouri == ''}}">
+            <audio id="{{item.id}}" poster="{{item.bimageuri}}" name="{{item.theme_name}}" author="{{item.screen_name}}" src="{{item.voiceuri}}" controls="true" loop  bindplay="audioplay" bindended="audioendplay"></audio>
+          </view>
+
+           <view class="cell-content-video" wx:if="{{item.image1 && item.voiceuri == '' && item.videouri}}">
+            <video id="{{item.id}}" src="{{item.videouri}}" bindplay="videoplay" bindpause="videopause" poster="{{item.bimageuri}}" enable-danmu danmu-btn controls></video>
+          </view>  
+
+        </view>
+
+        <!--贴子底部  -->
+        <view class="cell-toolbar">
+          <view class="ding">
+            <image src="../../images/mainCellDing.png"></image>
+            <text>{{item.ding}}</text>
+          </view>
+          <view class="cai">
+            <image src="../../images/mainCellCai.png"></image>
+            <text>{{item.cai}}</text>
+          </view>
+          <view class="share">
+            <image src="../../images/mainCellShare.png"></image>
+            <text>{{item.repost}}</text>
+          </view>
+          <view class="comment">
+            <image src="../../images/mainCellComment.png"></image>
+            <text>{{item.comment}}</text>
+          </view>
+        </view>
+</view>
+
+<!--最热评论  -->
+<view wx:if="{{hotItem.length > 0}}">
+  
+  <view class="hot">最热评论</view>
+
+  <view class="cell hotCell"  wx:for="{{hotItem}}">
+    <!--贴子头部  -->
+          <view class="cell-header">
+            <view class="cell-header-icon">
+              <image src="{{item.user.profile_image}}"></image>
+            </view>
+            <view class="cell-header-name">
+            <text>{{item.user.username}}</text>
+            <text class="cell-header-time">{{item.ctime}}</text>
+            </view>
+          </view>
+
+          <!--贴子内容  -->
+          <view class="cell-content">
+            <view class="cell-content-text">
+              <text>{{item.content}}</text>
+            </view>
+
+            <view class="cell-content-image" wx:if="{{item.image1 && item.voiceuri == '' && item.videouri == ''}}">
+              <image src="{{item.image1}}" mode="center"></image>
+            </view> 
+
+            <view class="cell-content-voice" wx:if="{{item.image1 && item.voiceuri && item.videouri == ''}}">
+              <audio id="{{item.id}}" poster="{{item.bimageuri}}" name="{{item.theme_name}}" author="{{item.screen_name}}" src="{{item.voiceuri}}" controls="true" loop  bindplay="audioplay" bindended="audioendplay"></audio>
+            </view>
+
+            <view class="cell-content-video" wx:if="{{item.image1 && item.voiceuri == '' && item.videouri}}">
+              <video id="{{item.id}}" src="{{item.videouri}}" bindplay="videoplay" bindpause="videopause" poster="{{item.bimageuri}}" enable-danmu danmu-btn controls></video>
+            </view>  
+
+          </view>
+  </view>
+
+</view>
+
+<!--最新评论  -->
+<view wx:if="{{hotItem.length > 0}}">
+  
+  <view class="hot">最新评论</view>
+
+  <view class="cell hotCell"  wx:for="{{commentItem}}">
+    <!--贴子头部  -->
+          <view class="cell-header">
+            <view class="cell-header-icon">
+              <image src="{{item.user.profile_image}}"></image>
+            </view>
+            <view class="cell-header-name">
+            <text>{{item.user.username}}</text>
+            <text class="cell-header-time">{{item.ctime}}</text>
+            </view>
+          </view>
+
+          <!--贴子内容  -->
+          <view class="cell-content">
+            <view class="cell-content-text">
+              <text>{{item.content}}</text>
+            </view>
+
+            <view class="cell-content-image" wx:if="{{item.image1 && item.voiceuri == '' && item.videouri == ''}}">
+              <image src="{{item.image1}}" mode="center"></image>
+            </view> 
+
+            <view class="cell-content-voice" wx:if="{{item.image1 && item.voiceuri && item.videouri == ''}}">
+              <audio id="{{item.id}}" poster="{{item.bimageuri}}" name="{{item.theme_name}}" author="{{item.screen_name}}" src="{{item.voiceuri}}" controls="true" loop  bindplay="audioplay" bindended="audioendplay"></audio>
+            </view>
+
+            <view class="cell-content-video" wx:if="{{item.image1 && item.voiceuri == '' && item.videouri}}">
+              <video id="{{item.id}}" src="{{item.videouri}}" bindplay="videoplay" bindpause="videopause" poster="{{item.bimageuri}}" enable-danmu danmu-btn controls></video>
+            </view>  
+
+          </view>
+  </view>
+
+</view>
+
+</scroll-view>

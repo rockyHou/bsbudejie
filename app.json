@@ -1,0 +1,43 @@
+{
+  "pages":[     
+    "pages/index/index",
+    "pages/new/new",
+    "pages/index/detail",
+    "pages/trends/trends",
+    "pages/me/me"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#e50541",
+    "navigationBarTitleText": "百思不得姐",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "精华",
+        "iconPath":"images/tabBar/tabBar_essence_icon.png",
+        "selectedIconPath":"images/tabBar/tabBar_essence_click_icon.png"
+      },
+      {
+        "pagePath": "pages/new/new",
+        "text": "新贴",
+        "iconPath": "images/tabBar/tabBar_new_icon.png",
+        "selectedIconPath": "images/tabBar/tabBar_new_click_icon.png"
+      },
+      {
+        "pagePath": "pages/trends/trends",
+        "text": "关注",
+        "iconPath": "images/tabBar/tabBar_friendTrends_icon.png",
+        "selectedIconPath": "images/tabBar/tabBar_friendTrends_click_icon.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我",
+        "iconPath": "images/tabBar/tabBar_me_icon.png",
+        "selectedIconPath": "images/tabBar/tabBar_me_click_icon.png"
+      }
+    ]
+  }
+}

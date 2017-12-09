@@ -1,0 +1,123 @@
+/*me.wxss  */
+
+page{
+  background-color: #ccc;
+}
+
+.me-container{
+  width:100%;
+  height:100%;  
+}
+
+.login{
+  width:95%;
+  background-color: white; 
+  display:flex;
+  justify-content: space-between;
+  padding:0rpx 20rpx;
+  align-items: center;
+}
+
+.login-icon{
+  width:60%;
+  height:100%;
+  font-size:12px;
+  display:flex;
+}
+
+.login-icon text{
+  height:50px;
+  line-height:50px;
+}
+
+.login-icon image{
+  width:50px;
+  height:50px;
+  border-radius:25px;
+  margin:0rpx 10rpx;
+}
+
+.login-arrow{
+  color:#ccc;
+}
+
+swiper{
+  width:100%;
+  height:30%;
+  background-color: white;
+  margin:5rpx 0rpx;
+}
+
+.btnView{
+  width:100%;
+  height:100%;
+  display:flex;
+  flex-wrap: wrap;
+  padding:20rpx 0rpx;
+}
+
+.btnView-btn{
+  width:20%;
+  height:140rpx;
+  font-size:10px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  text-align:center;
+}
+
+.btnView-btn image{
+  width:100rpx;
+  height:100rpx;
+  border-radius:100rpx;
+}
+
+.recommendTag-header{
+  font-size:12px;
+  background-color:white;
+  padding-left:10rpx;
+  color:#666;
+}
+
+.recommendTag-cell{
+  background-color:white;
+  width:100%;
+  font-size:12px;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  padding:10rpx 15rpx 10rpx 5rpx;
+  margin-bottom: 1px;
+}
+
+.recommendTag-cell-left{
+  width:70%;
+  height:100%;
+  display:flex;
+}
+
+.recommendTag-cell-left image{
+  width:100rpx;
+  height:100rpx;
+  border-radius:5rpx;
+}
+
+.recommendTag-cell-title{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  margin:0rpx 10rpx;
+}
+
+.tj{
+  font-size:10px;
+  color:#999;
+}
+
+.tz{
+  color:red;
+}
+
+.recommendTag-cell-right button{
+  color:red;
+}

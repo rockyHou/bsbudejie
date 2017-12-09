@@ -1,0 +1,70 @@
+
+.cell-header{
+  height:80rpx;
+  display:flex;
+  border-bottom:1rpx solid #e8e8e8;
+  padding:10rpx;  
+}
+
+.cell-content{
+  padding:10px 0px;
+  border-bottom:1rpx solid #e8e8e8;
+}
+
+.cell-content-text{
+  margin:10rpx 0rpx;
+}
+
+.cell-content-image,.cell-content-video{
+  width:99.5%;
+}
+
+.cell-content-image image,.cell-content-video video{
+  width:100%;
+}
+
+.cell-header-icon{
+  height:100%;
+  margin:0rpx 10rpx;
+}
+
+.cell-header-icon image{
+  width:80rpx;
+  height:100%;
+  border-radius: 40rpx;
+}
+
+.cell-header-name{  
+  width:100%;
+  display:flex;
+  flex-direction: column;
+}
+
+.cell-toolbar{
+  width:100%;
+  height:50rpx;
+  display:flex;
+  margin:10px 0px;
+}
+
+.ding,.cai, .share,.comment{
+  width:25%;
+  height:100%;
+  display: flex;
+  justify-content: center;
+  line-height:50rpx;
+  text-align: center;
+}
+
+.ding image,.cai image,.share image,.comment image{
+  width:50rpx;
+  height:50rpx;
+}
+
+.ding text,.cai text,.share text,.comment text{
+  color:#999;
+}
+
+.cell-header-time{
+  font-size:9px;
+}

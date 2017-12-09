@@ -1,0 +1,53 @@
+<!--mainCell.wxml  -->
+<template name="mainCell">
+        <!--贴子头部  -->
+        <view class="cell-header">
+          <view class="cell-header-icon">
+            <image src="{{item.profile_image}}"></image>
+          </view>
+          <view class="cell-header-name">
+          <text>{{item.name}}</text>
+          <text class="cell-header-time">{{item.passtime}}</text>
+          </view>
+        </view>
+
+        <!--贴子内容  -->
+        <view class="cell-content">
+          <view class="cell-content-text">
+            <text>{{item.text}}</text>
+          </view>
+
+          <view class="cell-content-image" wx:if="{{item.image1 && item.voiceuri == '' && item.videouri == ''}}" data-image="{{item.image1}}"  catchtap='clickImage'>
+            <image src="{{item.image1}}" mode="center"></image>
+          </view> 
+
+          <view class="cell-content-voice" wx:if="{{item.image1 && item.voiceuri && item.videouri == ''}}">
+            <audio id="{{item.id}}" poster="{{item.bimageuri}}" name="{{item.theme_name}}" author="{{item.screen_name}}" src="{{item.voiceuri}}" controls="true" loop  bindplay="audioplay" bindended="audioendplay" catchtap='clickVoice'></audio>
+          </view>
+
+           <view class="cell-content-video" wx:if="{{item.image1 && item.voiceuri == '' && item.videouri}}">
+            <video id="{{item.id}}" src="{{item.videouri}}" bindplay="videoplay" bindpause="videopause" poster="{{item.bimageuri}}" enable-danmu danmu-btn controls catchtap='clickVideo'></video>
+          </view>  
+
+        </view>
+
+        <!--贴子底部  -->
+        <view class="cell-toolbar">
+          <view class="ding">
+            <image src="../../images/other/mainCellDing.png"></image>
+            <text>{{item.ding}}</text>
+          </view>
+          <view class="cai">
+            <image src="../../images/other/mainCellCai.png"></image>
+            <text>{{item.cai}}</text>
+          </view>
+          <view class="share">
+            <image src="../../images/other/mainCellShare.png"></image>
+            <text>{{item.repost}}</text>
+          </view>
+          <view class="comment">
+            <image src="../../images/other/mainCellComment.png"></image>
+            <text>{{item.comment}}</text>
+          </view>
+        </view>
+</template>

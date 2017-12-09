@@ -1,0 +1,70 @@
+<!--index.wxml  -->
+<import src="../../comm/mainCell.wxml" />
+
+<!--顶部  -->
+<view class="top-menu">
+  <view class="top-menu-item {{currentTab == idx ? 'on' : ''}}" data-idx="{{idx}}" wx:for="{{tabBarItem}}" wx:for-index="idx" bindtap='switchTab'>{{item}}</view>
+</view>
+
+<swiper current="{{currentTab}}" duration='300' bindchange='switchBt' style="width:{{swiperWidth}}px;height:{{swiperHeight}}px">
+  <view class="cell-refresh" hidden="{{refresh == 0 ? true : false}}" style="height:{{refresh}}rpx;">
+    <text hidden="{{refresh == 0 ? true : false}}">正在刷新...</text>
+  </view>
+  <swiper-item>
+    <scroll-view class="scrollView" scroll-y="{{true}}" bindscrolltolower="loadMoreData" bindscrolltoupper="refreshNewData">
+      <!--贴子  -->
+      
+      <view class="cell" wx:for="{{allDataList}}" data-cell="{{item}}" bindtap="clickCell">
+        <template is="mainCell" data="{{item}}" />
+      </view>
+      <view class="cell-loadmore" hidden="{{loadmore == 0 ? true : false}}" style="height:{{loadmore}}rpx;">
+        <text hidden="{{loadmore == 0 ? true : false}}">正在加载数据...</text>
+      </view>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item>
+    <scroll-view class="scrollView" scroll-y="{{true}}" bindscrolltolower="loadMoreData" bindscrolltoupper="refreshNewData">
+      <!--图片  -->
+      <view class="cell" wx:for="{{imageDataList}}"  data-cell="{{item}}" bindtap="clickCell">
+        <template is="mainCell" data="{{item}}" />
+      </view>
+      <view class="cell-loadmore" hidden="{{loadmore == 0 ? true : false}}" style="height:{{loadmore}}rpx;">
+        <text hidden="{{loadmore == 0 ? true : false}}">正在加载数据...</text>
+      </view>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item>
+    <scroll-view class="scrollView" scroll-y="{{true}}" bindscrolltolower="loadMoreData" bindscrolltoupper="refreshNewData">
+      <!--段子  -->
+      <view class="cell" wx:for="{{wordDataList}}" data-cell="{{item}}" bindtap="clickCell">
+        <template is="mainCell" data="{{item}}" />
+      </view>
+      <view class="cell-loadmore" hidden="{{loadmore == 0 ? true : false}}" style="height:{{loadmore}}rpx;">
+        <text hidden="{{loadmore == 0 ? true : false}}">正在加载数据...</text>
+      </view>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item>
+    <scroll-view class="scrollView" scroll-y="{{true}}" bindscrolltolower="loadMoreData" bindscrolltoupper="refreshNewData">
+      <!--声音  -->
+      <view class="cell" wx:for="{{voiceDataList}}" data-cell="{{item}}" bindtap="clickCell">
+        <template is="mainCell" data="{{item}}" />
+      </view>
+      <view class="cell-loadmore" hidden="{{loadmore == 0 ? true : false}}" style="height:{{loadmore}}rpx;">
+        <text hidden="{{loadmore == 0 ? true : false}}">正在加载数据...</text>
+      </view>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item>
+    <scroll-view class="scrollView" scroll-y="{{true}}" bindscrolltolower="loadMoreData" bindscrolltoupper="refreshNewData">
+      <!--视频  -->
+      <view class="cell" wx:for="{{videoDataList}}" data-cell="{{item}}" bindtap="clickCell">
+        <template is="mainCell" data="{{item}}" />
+      </view>
+      <view class="cell-loadmore" hidden="{{loadmore == 0 ? true : false}}" style="height:{{loadmore}}rpx;">
+        <text hidden="{{loadmore == 0 ? true : false}}">正在加载数据...</text>
+      </view>
+    </scroll-view>
+  </swiper-item>
+  
+</swiper>

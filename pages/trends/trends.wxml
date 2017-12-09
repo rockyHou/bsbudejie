@@ -1,0 +1,35 @@
+<!--trends.wxml  -->
+
+<view class="trends-container">
+  <!--左侧  -->
+  <view class="leftView">
+    <block wx:for="{{level1}}" wx:for-index="idx">
+      <text class="{{(idx == current) ? 'active':''}}" data-id="{{item.id}}" data-idx="{{idx}}" bindtap='clickLevel1'>{{item.name}}</text>
+    </block>    
+  </view>
+
+  <!--右侧  -->
+  <view class="rightView" style="height:{{swiperHeight}}px">
+  <scroll-view class="scrollView" scroll-y="{{true}}">
+    <!--推荐关注人  -->
+    <view class="rightView-item" wx:for="{{level2}}">
+      <!--左部边  -->
+      <view class="rightView-item-left">
+        <!--头像  -->
+        <image src="{{item.header}}"></image>
+        <view class="rightView-item-left-info">
+          <text class="nc">{{item.screen_name}}</text>
+          <text class="gz">{{item.fans_count}}人关注</text>
+        </view>
+      </view>
+
+      <!--右边  -->
+      <view class="rightView-item-right">
+        <button size="mini">+关注</button>
+      </view>
+    </view>
+  </scroll-view>
+    
+
+  </view>
+</view>
