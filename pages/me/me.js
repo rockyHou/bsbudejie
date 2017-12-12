@@ -57,6 +57,11 @@ Page({
       that.setData({ recommendTag: d});
     });  
   },
+  jumpWeb:function(){
+    wx.navigateTo({
+      url: '../webview/index',
+    })
+  },
   /**
    * 生命周期函数--监听页面显示
    */

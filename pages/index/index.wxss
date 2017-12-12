@@ -46,6 +46,13 @@
   text-align:center;
   line-height:50rpx;
   background-color: #ccc;
+  display:flex;
+  justify-content: center;
+}
+
+.cell-refresh image, .cell-loadmore image{
+  width:50rpx;
+  height:50rpx;
 }
 
 @import "../../comm/mainCell.wxss";

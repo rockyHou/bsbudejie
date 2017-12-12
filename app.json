@@ -1,24 +1,25 @@
 {
-  "pages":[     
+  "pages": [
     "pages/index/index",
     "pages/new/new",
     "pages/index/detail",
     "pages/trends/trends",
-    "pages/me/me"
+    "pages/me/me",
+    "pages/webview/index"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#e50541",
     "navigationBarTitleText": "百思不得姐",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "list": [
       {
         "pagePath": "pages/index/index",
         "text": "精华",
-        "iconPath":"images/tabBar/tabBar_essence_icon.png",
-        "selectedIconPath":"images/tabBar/tabBar_essence_click_icon.png"
+        "iconPath": "images/tabBar/tabBar_essence_icon.png",
+        "selectedIconPath": "images/tabBar/tabBar_essence_click_icon.png"
       },
       {
         "pagePath": "pages/new/new",

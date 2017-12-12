@@ -4,7 +4,7 @@
   <!--登录cell  -->
   <view class="login">
 
-    <view class="login-icon">
+    <view class="login-icon" bindtap='jumpWeb'>
       <image src="../../images/other/default.png"></image>
       <text>登录/注册</text>
     </view>

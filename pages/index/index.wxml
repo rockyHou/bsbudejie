@@ -8,6 +8,7 @@
 
 <swiper current="{{currentTab}}" duration='300' bindchange='switchBt' style="width:{{swiperWidth}}px;height:{{swiperHeight}}px">
   <view class="cell-refresh" hidden="{{refresh == 0 ? true : false}}" style="height:{{refresh}}rpx;">
+    <image src="../../images/other/loading.gif" mode='aspectFit'></image>
     <text hidden="{{refresh == 0 ? true : false}}">正在刷新...</text>
   </view>
   <swiper-item>
@@ -18,6 +19,7 @@
         <template is="mainCell" data="{{item}}" />
       </view>
       <view class="cell-loadmore" hidden="{{loadmore == 0 ? true : false}}" style="height:{{loadmore}}rpx;">
+        <image src="../../images/other/loading.gif" mode='aspectFit'></image>
         <text hidden="{{loadmore == 0 ? true : false}}">正在加载数据...</text>
       </view>
     </scroll-view>
@@ -29,6 +31,7 @@
         <template is="mainCell" data="{{item}}" />
       </view>
       <view class="cell-loadmore" hidden="{{loadmore == 0 ? true : false}}" style="height:{{loadmore}}rpx;">
+        <image src="../../images/other/loading.gif" mode='aspectFit'></image>
         <text hidden="{{loadmore == 0 ? true : false}}">正在加载数据...</text>
       </view>
     </scroll-view>
@@ -40,6 +43,7 @@
         <template is="mainCell" data="{{item}}" />
       </view>
       <view class="cell-loadmore" hidden="{{loadmore == 0 ? true : false}}" style="height:{{loadmore}}rpx;">
+        <image src="../../images/other/loading.gif" mode='aspectFit'></image>
         <text hidden="{{loadmore == 0 ? true : false}}">正在加载数据...</text>
       </view>
     </scroll-view>
@@ -51,6 +55,7 @@
         <template is="mainCell" data="{{item}}" />
       </view>
       <view class="cell-loadmore" hidden="{{loadmore == 0 ? true : false}}" style="height:{{loadmore}}rpx;">
+        <image src="../../images/other/loading.gif" mode='aspectFit'></image>
         <text hidden="{{loadmore == 0 ? true : false}}">正在加载数据...</text>
       </view>
     </scroll-view>
@@ -62,6 +67,7 @@
         <template is="mainCell" data="{{item}}" />
       </view>
       <view class="cell-loadmore" hidden="{{loadmore == 0 ? true : false}}" style="height:{{loadmore}}rpx;">
+        <image src="../../images/other/loading.gif" mode='aspectFit'></image>
         <text hidden="{{loadmore == 0 ? true : false}}">正在加载数据...</text>
       </view>
     </scroll-view>

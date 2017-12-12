@@ -106,8 +106,8 @@ Page({
   refreshNewData:function(){
     var that = this;
     //显示正在加载
-    util.showLoading();
-    wx.showNavigationBarLoading();
+    // util.showLoading();
+    // wx.showNavigationBarLoading();
     this.setData({refresh:50});
 
     var param = "a=list&c=data&type="+types[dataType];
@@ -117,8 +117,8 @@ Page({
       //设置新数据
       that.setNewDataWithRes(res,that);
       setTimeout(function(){
-        util.hideToast();
-        wx.hideNavigationBarLoading();
+        // util.hideToast();
+        // wx.hideNavigationBarLoading();
         that.setData({ refresh: 0 });
         wx.stopPullDownRefresh();
       },1000);
@@ -152,8 +152,8 @@ Page({
   loadMoreData:function(){
     var that = this;
     //显示正在加载
-    util.showLoading();
-    wx.showNavigationBarLoading();
+    // util.showLoading();
+    // wx.showNavigationBarLoading();
     that.setData({loadmore: 50});
 
     var param = "a=list&c=data&type=" + types[dataType]+"&page="+page+"&maxtime="+this.getMaxTime();
@@ -162,8 +162,8 @@ Page({
       //设置新数据
       that.setDataWithRes(res, that);
       setTimeout(function () {
-        util.hideToast();
-        wx.hideNavigationBarLoading();
+        // util.hideToast();
+        // wx.hideNavigationBarLoading();
         that.setData({loadmore: 0});
 
         wx.stopPullDownRefresh();
